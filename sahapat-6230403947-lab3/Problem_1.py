@@ -6,3 +6,4 @@ while total <= 200:
     i += 1
 
 print("The final total is", total)
+

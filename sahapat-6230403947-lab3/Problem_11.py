@@ -1,29 +1,29 @@
 while True:
     try:
-        first_number = float(input("Enter the first number: "))
-        if first_number == "quit":
+        one = float(input("Enter the first number: "))
+        if one == "quit":
             break
-        second_number = float(input("Enter the second number: "))
-        if second_number == "quit":
+        two = float(input("Enter the second number: "))
+        if two == "quit":
             break
         operator = str(input("Enter the operator: "))
     except ValueError:
         break
     if operator == "+":
-        print(f"{first_number} + {second_number} = "
-              f"{first_number + second_number}")
+        print(f"{one} + {two} = "
+              f"{one + two}")
     elif operator == "-":
-        print(f"{first_number} - {second_number} = "
-              f"{first_number - second_number}")
+        print(f"{one} - {two} = "
+              f"{one - two}")
     elif operator == "*":
-        print(f"{first_number} * {second_number} = "
-              f"{first_number * second_number}")
+        print(f"{one} * {two} = "
+              f"{one * two}")
     elif operator == "/":
-        if first_number == 0 or second_number == 0:
+        if one == 0 or two == 0:
             print("Cannot divide a number by 0")
         else:
-            print(f"{first_number} / {second_number} = "
-                  f"{first_number / second_number}")
+            print(f"{one} / {two} = "
+                  f"{one / two}")
     elif operator == "quit":
         break
     else:
