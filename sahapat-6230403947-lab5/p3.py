@@ -2,7 +2,7 @@ import math
 
 def mult(a, b):
     try:
-        hypotenuse = math.sqrt(a**2 + b**2)
+        hypotenuse = math.sqrt((math.pow(a, 2) + math.pow(b, 2)))
         return hypotenuse
     except TypeError:
         return None

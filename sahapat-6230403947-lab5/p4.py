@@ -6,9 +6,13 @@ def factorial(x) :
 
 
 try:
-    integer_fac = int(input("Enter an integer: "))
-    if integer_fac < 0:
-        raise ValueError("{} is not a positive integer.".format(integer_fac))
+    integer_fac = float(input("Enter an integer: "))
+    if integer_fac != int(integer_fac):
+        raise ValueError("%s is not a positive integer."% integer_fac)
+    elif integer_fac < 0:
+        raise ValueError("%s is not a positive integer."% integer_fac)
+    else:
+        integer_fac = int(integer_fac)
 except ValueError  as err:
     print("Please enter a positive integer. %s" % err)
 else:

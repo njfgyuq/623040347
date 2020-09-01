@@ -14,16 +14,17 @@ def robust_calculator():
 
 
 def input_op(msg):
-    a = input(msg)
-    try:
-        if a == 'q' or a == 'Q':
-            exit()
-        else:
-            a = float(a)
-            return a
-    except ValueError:
-        print("Please enter the operand or q.")
-        input_op(msg)
+    while True:
+        a = input(msg)
+        try:
+            if a == 'q' or a == 'Q':
+                exit()
+            else:
+                a = float(a)
+                return a
+        except ValueError:
+            print("Please enter the operand or q.")
+        continue
 
 
 def cal_op():
@@ -43,7 +44,7 @@ def format():
     return format_value
 
 
-def cal(f_num, s_num, cal_num, format_value):
+def cal(f_num, s_num, cal_num, format_re):
     if cal_num == "+":
         result = f_num + s_num
     elif cal_num == "-":
@@ -59,9 +60,9 @@ def cal(f_num, s_num, cal_num, format_value):
             return None
     else:
         return None
-    if format_value == "float":
+    if format_re == "float":
         result = float(result)
-    elif format_value == "int":
+    elif format_re == "int":
         result = int(round(result))
     else:
         return None
