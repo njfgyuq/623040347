@@ -28,7 +28,7 @@ def flexible_calculator(operation=ADD, output_formal=float, *args):
     if operation == ADD:
         result = 0
         for i in args:
-            result += 1
+            result += i
     elif operation == SUB:
         result = args[0]
         for i in range(len(args) - 1):
